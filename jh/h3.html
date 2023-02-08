@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iteration Statements</title>
+    <style>
+        h2{
+            background-color: red;
+            padding-left: 10px;
+        }
+        pre{
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <h2>Iteration Statements</h2>
+    <h3>1. Find the number of digits</h3>
+    <p>Take a number from the user and print the count of digits in that number.</p>
+    <h5>Answer:</h5>
+    <pre>
+            const Find_Digit = (N) =>
+            {
+                let count = 0;
+                while (N!=0){
+                    N = Math.floor(N/10);
+                    ++count;
+                }
+                return count;
+            };
+    </pre>
+    <h3>2. Find the Fives.</h3>
+    <p>Among all the digits from 0−9, PrepBuddy likes number 5. He has a number and wants you to find out the number of times 5 occurred in the given number.</p>
+    <h5>Answer:</h5>
+    <pre>
+            const Find_Five = (N) => 
+            {
+                let count =0;
+                while (N !==0){
+                    if (N%10===5){
+                        count++;
+                    }
+                    N/=10;
+                    N=Math.floor(N);
+                }	
+                return count;
+            };        
+    </pre>
+    <h3>3. Find Sum</h3>
+    <p>You are given an integer N, and your task is to find the sum of all the even integers starting from 1 upto N (N inclusive).</p>
+    <h5>Answer:</h5>
+    <pre>
+            const findSum = (n) =>
+            {
+                let sum = 0;
+                let i = 1;
+                while (i <= n){
+                    if(isEven(i)){
+                        sum += i;
+                    }
+                    i++;
+                }
+                return sum;
+            };
+
+            function isEven(n){
+                return n % 2 == 0;
+            };
+    </pre>
+    <h3>4. Find the sum of the digits of a given number.</h3>
+    <p>Write a program that takes a number from the user and get the sum of the digits present in the number.</p>
+    <h5>Answer:</h5>
+    <pre>
+            const Number_Sum = (N) =>
+            {
+                let sum=0;
+                while (N !== 0){
+                    sum+=N%10;
+                    N/=10;
+                    n=Math.floor(N);
+                }
+                return sum;
+            };
+    </pre>
+    <h3>5. Print the Odds.</h3>
+    <p>Write a program which takes  a number from user and print all odd numbers in between 2 and N, but print 2 first.</p>
+    <h5>Answer:</h5>
+    <pre>
+            const Print_Odd = (N) =>
+            {
+                let p=2;
+                while (p<=N){
+                    if(p==2){
+                        console.log(2);
+                    }
+                    elsevif(p%2==1){
+                        console.log(p);
+                    }
+                    p++;
+                }
+            };
+    </pre>
+    <h3>6. Print the Pattern.</h3>
+    <p>Write a program which ask user for no of lines and print a pattern using an asterik .</p>
+    <h5>Answer:</h5>
+    <pre>
+            const Print_pattern = (N) =>
+            {
+                let p="";
+                for(let i=1; i<=N; i++){
+                    p+="*";
+                    console.log(p);
+                }
+            };
+    </pre>
+    <h3>7. Check whether a Number is a prime or not.</h3>
+    <p>Write a program which takes  a number from user and check whether number is prime number or not a prime number.</p>
+    <h5>Answer:</h5>
+    <pre>
+            const Prime_Check = (N) =>
+            {
+                let count=0;
+                for(let i=1; i<=N; i++){
+                    if(N%i===0){
+                        count++;
+                    }
+                }
+                if(count==2){
+                    return "YES";
+                }
+                else{
+                    return "NO";
+                }
+            };
+    </pre>
+    <h3>8. Print Numbers</h3>
+    <p>You are given an integer N, and your task is to print all the integers starting from 1 till N(N inclusive).</p>
+    <h5>Answer:</h5>
+    <pre>
+            const printNumbers = (n) =>
+            {
+                for  (let int=1; int<=n; int++){
+                    console.log(int);
+                }
+            };
+    </pre>
+    <h3>9. Print the Table</h3>
+    <p>Write a program which takes a number from user and print the table.</p>
+    <h5>Answer:</h5>
+    <pre>
+            const Print_Table = (N) =>
+            {
+                for(let i=1; i<=10; i++){
+                    console.log(N+"*"+i+"="+N*i);
+                }
+            };
+    </pre>
+</body>
+</html>
