@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array of Objects</title>
+    <style>
+        h2 {
+            background-color: red;
+            padding-left: 10px;
+        }
+
+        pre {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Array of Objects</h2>
+    <p>1. "We are interested in retrieving only the students' names; all the names should be in caps.
+        <br>
+        ['JOHN', 'BABA', 'YAGA', 'WICK']"
+    </p>
+    <h5>Answer:</h5>
+    <pre>
+            let studentRecords = [
+        { name: 'John', id: 123, marks: 98 },
+        { name: 'Baba', id: 101, marks: 23 },
+        { name: 'yaga', id: 200, marks: 45 },
+        { name: 'Wick', id: 115, marks: 75 }
+    ]
+    let studentNames =studentRecords.map((student) => student.name.toUpperCase());
+    console.log(studentNames);
+        </pre>
+    <p>2. "Suppose we have the same dataset as above but this time we want to get the details of students who scored
+        more than 50 marks.
+        <br>
+        [{name: 'John', id: 123, marks: 98 },{name: 'Wick', id: 115, marks: 75 }]"
+    </p>
+    <h5>Answer:</h5>
+    <pre>
+                let studentRecords = [
+        { name: 'John', id: 123, marks: 98 },
+        { name: 'Baba', id: 101, marks: 23 },
+        { name: 'yaga', id: 200, marks: 45 },
+        { name: 'Wick', id: 115, marks: 75 }
+    ];
+    for(let i = 0; i < studentRecords.length;i++)
+    {
+        let mark = studentRecords[i] . marks;
+        if(mark > 50)
+        {
+            console.log(studentRecords[i]);
+        }   
+    }
+            </pre>
+    <p>3. Retrieve the details of students who scored more than 50 marks and have IDs greater than 120.</p>
+    <h5>Answer:</h5>
+    <pre>
+                let studentRecords = [
+            { name: 'John', id: 123, marks: 98 },
+            { name: 'Baba', id: 101, marks: 23 },
+            { name: 'yaga', id: 200, marks: 45 },
+            { name: 'Wick', id: 115, marks: 75 }
+        ];
+        for (let i = 0; i < studentRecords.length; i++) {
+            let mark = studentRecords[i].marks;
+            let id = studentRecords[i].id;
+            if (mark > 50 && id > 120) {
+                console.log(studentRecords[i]);
+            }
+        }
+            </pre>
+    <p>4. Consider the same scenario we have discussed above, but this time we would like to know the sum total of the
+        marks of the students.</p>
+    <h5>Answer:</h5>
+    <pre>
+                let studentRecords = [
+            { name: 'John', id: 123, marks: 98 },
+            { name: 'Baba', id: 101, marks: 23 },
+            { name: 'yaga', id: 200, marks: 45 },
+            { name: 'Wick', id: 115, marks: 75 }
+        ];
+        let sum = 0;
+        for (let i = 0; i < studentRecords.length; i++) {
+            let mark = studentRecords[i].marks;
+            sum += mark;
+        }
+        console.log(sum);
+            </pre>
+    <p>5. This time we want to get only the names of the students who scored more than 50 marks from the same dataset
+        used above.</p>
+    <h5>Answer:</h5>
+    <pre>
+                let studentRecords = [
+            { name: 'John', id: 123, marks: 98 },
+            { name: 'Baba', id: 101, marks: 23 },
+            { name: 'yaga', id: 200, marks: 45 },
+            { name: 'Wick', id: 115, marks: 75 }
+        ];
+        for (let i = 0; i < studentRecords.length; i++) {
+            let mark = studentRecords[i].marks;
+            let name = studentRecords[i].name;
+            if(mark > 50)
+            {
+                console.log(name);
+            }
+        }
+            </pre>
+    <p>6. This time we are required to print the sum of marks of the students with id > 120.</p>
+    <h5>Answer:</h5>
+    <pre>
+                let studentRecords = [
+            { name: 'John', id: 123, marks: 98 },
+            { name: 'Baba', id: 101, marks: 23 },
+            { name: 'yaga', id: 200, marks: 45 },
+            { name: 'Wick', id: 115, marks: 75 }
+        ];
+        let sum = 0;
+        for (let i = 0; i < studentRecords.length; i++) {
+            let mark = studentRecords[i].marks;
+            let id = studentRecords[i].id;
+            if (id > 120) {
+                sum += mark;
+            } 
+        }
+        console.log(sum);
+            </pre>
+    <p>7. This time we are required to print the total marks of the students with marks greater than 50 after a grace of
+        15 marks has been added to those students who scored less than 50.</p>
+    <h5>Answer:</h5>
+    <pre>
+                let studentRecords = [
+            { name: 'John', id: 123, marks: 98 },
+            { name: 'Baba', id: 101, marks: 23 },
+            { name: 'yaga', id: 200, marks: 45 },
+            { name: 'Wick', id: 115, marks: 75 }
+        ];
+        let sum = 0;
+        for (let i i= 0; i < studentRecords.length; i++) {
+            let mark = studentRecords[i].marks;
+            if (mark < 50) {
+                sum += mark + 15;
+                if(sum > 50)
+                {
+                    console.log(sum);
+                }
+            }
+        }
+            </pre>
+    <p>8. Create 6 objects , each object will have name, class, roll no as properties. Store these objects in an array
+        of objects. </p>
+    <h5>Answer:</h5>
+    <pre>
+                let arr =[
+        {
+            name: "Jyoti",
+            class: "MCA",
+            rollNo: 21,
+        },
+        {
+            name: "Ram",
+            class: "MCA",
+            rollNo: 22,
+        },
+        {
+            name: "Sham",
+            class: "MCA",
+            rollNo: 23,
+        },
+        {
+            name: "Girish",
+            class: "MCA",
+            rollNo: 24,
+        },
+        {
+            name: "Harshad",
+            class: "MCA",
+            rollNo: 25,
+        },
+        {
+            name: "Aniket",
+            class: "MCA",
+            rollNo: 26,
+        }
+        ];
+        console.log(arr);
+            </pre>
+
+</body>
+
+</html>

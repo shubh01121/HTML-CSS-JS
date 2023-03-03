@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function</title>
+    <style>
+        h2 {
+            background-color: red;
+            padding-left: 10px;
+        }
+
+        pre {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Function</h2>
+    <p>1. Create one function with zero parameter having a console statement.</p>
+    <h5>Answer:</h5>
+    <pre>
+        function Zero (){
+            console.log("Hello World"");
+        }
+        Zero();
+    </pre>
+    <p>2. Create one function which takes two values as a parameter and print the sum of them as "Sum of 3, 4 is 7"</p>
+    <h5>Answer:</h5>
+    <pre>
+    function Sum (a,b){
+        console.log("Sum of " + a + ", " + b + " is " + (a+b));
+    }
+    Sum(3,4);
+</pre>
+    <p>3. Create one arrow function</p>
+    <h5>Answer:</h5>
+    <pre>
+    const arrow = () => {
+        console.log("Hello World");
+    }
+    arrow();
+</pre>
+    <p>4.
+    <pre>
+    "Print output: 
+var x = 21;
+var girl = function () {
+    console.log(x);
+    var x = 20;
+};
+girl ();"
+</pre>
+    </p>
+    <h5>Answer:</h5>
+    <p>output - Undefined</p>
+    <p>5.
+    <pre>
+    "Print output: 
+var x = 21;
+girl ();
+console.log(x)
+function girl() {
+    console.log(x);
+    var x = 20;
+};
+"
+</pre>
+    </p>
+    <h5>Answer:</h5>
+    <p>output - Undefined <br>
+        21</p>
+    <p>6.
+    <pre>
+        "Print output
+
+var x = 21;
+a();
+b();
+
+  function a() {
+    
+   x = 20;
+  console.log(x);
+};
+ function b() {
+    
+    x = 40;
+   console.log(x);
+};"
+    </pre>
+    </p>
+    <h5>Answer:</h5>
+    <p>output - ReferenceError: a is not defined</p>
+    <p>7. Write a function that accepts parameter n and returns factorial of n</p>
+    <h5>Answer:</h5>
+    <pre>
+        function factorial(n) {
+            if (n == 0) {
+                return 1;
+            } else {
+              return n * factorial(n - 1);
+            }
+        }
+        console.log(factorial(5));
+        
+        output - 120
+    </pre>
+    <p>8.
+    <pre>
+        "Guess the Output
+
+function FindSum(a, b){
+    return a + b;
+}
+
+function DisplayData(data, batch){
+    console.log(`i am from ${data} and My batch is EA${batch}`)
+}
+
+DisplayData(""PrepBytes"", FindSum(10, 9));"
+    </pre>
+    </p>
+    <h5>Answer:</h5>
+    <p></p>
+</body>
+
+</html>
