@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closures</title>
+</head>
+<body>
+    <h2>Closures</h2>
+    <h3><pre>
+        1. function counter(){
+            var counter = 0;
+        
+            function IncreaseCounter() {
+                return counter += 1;
+            };
+        
+            return IncreaseCounter;
+        }
+        
+        var counter = counter();
+        alert(counter());
+        alert(counter());
+        alert(counter());
+        alert(counter());
+    </pre></h3>
+    <h5>Answer:</h5>
+    <pre>
+        Output: 
+        1
+        2
+        3
+        4
+    </pre>
+    <h3><pre>
+        2. "let count = 0;
+        (function () {
+          if (count === 0) {
+            let count = 1;
+            console.log(count); // What is logged?
+          }
+          console.log(count); // What is logged?
+        })();"
+    </pre></h3>
+    <h5>Answer:</h5>
+    <pre>
+        Output: 
+        1
+        0
+    </pre>
+    <h3><pre>
+        3. "for (var i = 0; i < 3; i++) {
+            setTimeout(function log() {
+              console.log(i); // What is logged?
+            }, 1000);
+          }"
+    </pre></h3>
+    <h5>Answer:</h5>
+    <pre>
+        3
+        3
+        3
+    </pre>
+    <h3>4. Write a code to calculate area of a rectangle using inner function. In this case outer function should accept parameter length and inner function should accept parameter breadth.</h3>
+    <h5>Answer:</h5>
+    <pre>
+        
+    </pre>
+</body>
+</html>

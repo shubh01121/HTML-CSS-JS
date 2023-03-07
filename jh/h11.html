@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inheritance and Prototype</title>
+    <style>
+        h2 {
+            background-color: red;
+            padding-left: 10px;
+        }
+
+        pre {
+            background-color: burlywood;
+        }
+    </style>
+</head>
+<body>
+    <h2>Inheritance and Prototype</h2>
+    <h3>1. Create 2 objects - parent and child. Attach methods to parent and use those methods in child object using parents prototype</h3>
+    <h5>Answer:</h5>
+    <pre>
+        const parentObj = {
+            calAge : function(){
+                console.log(`${this.fname} ${this.lname} ${this.age}`)
+            }
+        }
+        
+        const childObj = Object.create(parentObj);
+        childObj.fname = "EA18";
+        childObj.lname = "2022";
+        childObj.age = "Oct Batch";
+        
+       const childObj = Object.create(parentObj);
+        childObj.fname = "John";
+        childObj.lname = "Mathew";
+        childObj.age = 20;
+        
+        childObj.calAge();
+        
+
+    
+<b>output:</b>
+        EA18 2022 Oct Batch
+
+        John Mathew 20  
+    </pre>
+    <h3>2. Write code to explain prototype chaining</h3>
+    <h5>Answer:</h5>
+    <pre>
+        Prototype chaining is used to build new types of objects based on existing ones. It is similar to inheritance in a class based language.
+
+        class Person {
+            constructor() {
+              this.gender = 'male';
+            }
+            printPerson() {}
+          }
+          class User extends Person {
+            constructor() {
+              super();
+              this.name = 'Abhraham';
+            }
+            printUser() {}
+          }
+          var u = new User();
+          console.log(u);
+
+ <b>output:</b>
+     User {gender: 'male',name: 'Abhraham'}  
+    </pre>
+    <h3>3. Add a method to calculate sum of all elements in Array in array's protype, use that method to calculate sum for multiple arrays</h3>
+    <h5>Answer:</h5>
+    <pre>
+        const ParentObj = {
+            sum : function(arr) { 
+            let sum = 0; 
+            for (let i = 0; i < arr.length; i++){
+                sum += arr[i]; 
+            }
+            console.log(sum); 
+        }    
+        }
+        let arr1=[1,2,3,4,5];
+        let arr2=[1,2,3,4,5,6];
+        let arr3=[1,2,3,4,5,6,7];
+        
+        ParentObj.sum(arr1); 
+        ParentObj.sum(arr2);
+        ParentObj.sum(arr3);
+    
+Output: 
+     15 21 28   
+    </pre>
+    <h3>4. Write a JavaScript function to retrieve all the names of object's own and inherited properties.</h3>
+    <h5>Answer:</h5>
+    <pre>
+        
+        var myobj ={
+            name : "John",
+            batch : "EA18",
+            year : 2022,
+          }
+          let result = Object.keys(myobj);
+          console.log(result);
+
+    
+Output:
+      [ 'name', 'batch', 'year' ]   
+    </pre>
+</body>
+</html>
