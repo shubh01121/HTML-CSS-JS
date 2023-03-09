@@ -1,0 +1,113 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    /* background-color: black; */
+}
+.task h1, .item p, .add h2{
+    /* color: white; */
+}
+.task{
+    font-size: 25px;
+    position: absolute;
+    top: 40px;
+    left: 100px;
+}
+.item{
+    font-size: 25px;
+    position: absolute;
+    top: 130px;
+    left: 90px;
+    font-size: 30px;
+}
+.item p{
+    color: green;
+    font-weight: bolder;
+}
+.add{
+    position: absolute;
+    top: 60px;
+    left: 1150px;
+}
+.cc{
+    background-color: blue;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    left: 1100px;
+    top: 55px;
+    border-radius: 100px;
+}
+#createList{
+    padding: 7px 0px 0px 9px;
+    font-size: 20px;
+}
+
+#listForm{
+    background-color: white;
+    border: 2px solid;
+    color: black;
+    width: 450px;
+    height: 210px;
+    border-radius: 10px;
+    /* border-color: red; */
+    border-style: none;
+    position: fixed;
+    top: 250px;
+    left: 480px;
+    text-align: center;
+}
+
+#listForm h4{
+    padding-top: 20px;
+    color: red;
+}
+
+#listName{
+    margin: 20px;
+    height: 30px;
+    width: 250px;
+    text-align: center;
+    color: rgb(158, 145, 145);
+}
+
+.but{
+    margin: 10px;
+    width: 80px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: red;
+    color: white;
+    border-style: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+#lists{
+    border: 2px solid ;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

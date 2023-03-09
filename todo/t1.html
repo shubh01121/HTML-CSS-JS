@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="ti.css">
+    <title>TODOJS</title>
+</head>
+<body>
+    <div class="task"><h1>Task List</h1></div>
+    <div class="add"><h2>Add Item</h2></div>
+    <div class="item"><p>No Items in Todo list</p></div>
+    <div class="cc"><i id="createList" class="fa-solid fa-plus"></i></div>
+
+    <div style="visibility: hidden;" id="listForm">
+        <h4>Add New List</h4>
+    
+    <form>
+        <input type="text" id="listName" placeholder="Add New List"><br>
+        <button id="addList" type="button" class="but">Add</button>
+        <button id="close" type="button" class="but">Close</button>
+    </form>
+</div>
+
+<div id="lists">
+</div>
+
+<div style="visibility: hidden;" id="itemForm">
+    <h4>Add New Item</h4>
+    <form>
+        <input type="text" id="itemName">
+        <button id="addItem" type="button">Add</button>
+        <button id="exit" type="button">Close</button>
+    </form>
+</div>
+</body>
+</html>
+<script src="index.js"></script>
+
+
+
+
