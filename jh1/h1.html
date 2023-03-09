@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="h1.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="playbox"><p>Play Again</p></div>
+    <div class="bet"><h4>(Between 1 and 100)</h4></div>
+    <div class="num"><h1>Guess My Number!</h1></div>
+    <div class="que"><h1>?</h1></div>
+    
+    <div class="left">
+        <input type="number" id="guessid" class="checkbox">
+        <button class="check" onclick="check()">check!</button>
+    </div>
+    <div class="right">
+        <p class="message">Start guessing....</p>
+        <p class="chances">💯 Chances: <span class="score">100</span></p>
+        <p class="label-highscore">🥇Highscore: <span class="highscore">0</span></p>
+    </div>
+    <script>
+        let initialValue=100;
+        let highScore=null;
+
+        let random=generateRandomNumber(100);
+
+        function generateRandomNumber(max){
+            return Math.floor(Math.random() * max + 1);
+        }
+
+        function check(){
+            let currentNumber = document.getElementById("guesid").value
+
+            if(initialValue!==0){
+
+            if(currentNumber>random){
+                document.querySelector(".message").textContent = "Your Guess is High";
+                initialValue--;
+                document.querySelector(".score").textContent=initialValue
+            }else if(currentNumber<random){
+                document.querySelector(".message").textContent = "Your Guess is Low";
+                initialValue--;
+                document.querySelector(".score").textContent=initialValue
+            }else{
+                document.querySelector(".message").textContent="winner winner chicken dinner!!!"
+                initialValue--;
+                document.querySelector(".score").textContent=initialValue;
+
+                highScore=initialValue
+                document.querySelector(".highscore").textContent=highScore
+
+                document.body.style.backgrounnd="green";
+                document.querySelector(".check").style.visibility="hidden"
+            }
+        }
+        else{
+            document.querySelector(".message").textContent="Game Over";
+        }}
+    </script>
+</body>
+</html>
