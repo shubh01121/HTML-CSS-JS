@@ -17,17 +17,17 @@ function updateTime() {
 
     let greeting = document.getElementById("heading");
     if (hours >= 3 && hours < 12) {
-        greeting.innerText = "Good Morning!";
+        greeting.innerText = "Good Morning!! Wake Up!!";
     }
     if (hours >= 12 && hours < 16) {
-        greeting.innerText = "GoodAfterNoon!!"
+        greeting.innerText = "Good AfterNoon!! Take Some Sleep"
             ;
     }
     if (hours >= 16 && hours < 20) {
-        greeting.innerText = "GoodEvening!!"
+        greeting.innerText = "Good Evening!!"
     }
     if (hours >= 20 && hours < 24) {
-        greeting.innerText = "GoodNight!!"
+        greeting.innerText = "Good Night!!"
     }
 
     if (hours > 12) {
@@ -61,23 +61,23 @@ button.addEventListener("click", function () {
 
     if (parseInt(wakeUp.value) === hours) {
         document.getElementById("grab").innerText = "Grab Some Healthy Breakfast!!!";
-        document.getElementById("Img").style.backgroundImage = "url('./jimg/Component 30 – 1.png')";
+        document.getElementById("Img").src = "./jimg/Component 30 – 1.png"
 
     }
 
     else if (parseInt(lunch.value) === hours) {
-        document.getElementById("grab").innerText = "Let's have some lunch!!";
-        document.getElementById("Img").style.backgroundImage = "url('./jimg/Component 31 – 1.png')";
+        document.getElementById("grab").innerText = "Let's Have Some Lunch!!";
+        document.getElementById("Img").src = "./jimg/Component 31 – 1.png"
     }
 
     else if (parseInt(nap.value) === hours) {
-        document.getElementById("grab").innerText = "Stop yawning , get some tea.. Its just evening!";
-        document.getElementById("Img").style.backgroundImage = "url('./jimg/lunch_image.png')";
+        document.getElementById("grab").innerText = "Stop Yawning , Get Some Tea.. Its Just Evening!";
+        document.getElementById("Img").src = "./jimg/lunch_image.png"
     }
 
     else if (parseInt(night.value) === hours) {
-        document.getElementById("grab").innerText = "close your eyes and go to sleep";
-        document.getElementById("Img").style.backgroundImage = "url('./jimg/Component 32 – 1.png')";
+        document.getElementById("grab").innerText = "Close Your Eyes And Go To Sleep";
+        document.getElementById("Img").src = "./jimg/Component 32 – 1.png"
     }
 
     let como = document.getElementsByClassName("como");
