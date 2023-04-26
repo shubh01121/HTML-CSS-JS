@@ -4,7 +4,6 @@ document.querySelector("#addList").addEventListener("click",createCard);
 
 let cards=[];
 function createList(){
-   e
    document.querySelector("#listForm").style.visibility = "visible";
     console.log("List Created");
 }
@@ -13,11 +12,10 @@ function hideListForm(){
     document.querySelector("#listForm").style.visibility = "hidden";
     console.log("Hide List Form Executed");
 }
-//<i id="createList" class="fa-solid fa-plus"></i>
-//data-toggle="modal" data-target="#form"
+
 function createCard(){
     console.log("New");
-  //  document.querySelector("#listForm").style.visibility = "hidden";
+   document.querySelector("#listForm").style.visibility = "hidden";
     let userInput=document.querySelector("#listName").value;
     console.log("Card is being created");
     let card=document.createElement("div");
@@ -50,9 +48,8 @@ function createCard(){
 }
 function createSubTask(item){
     console.log("Subtask");
-   // document.querySelector("#subTaskForm").style.visibility = "visible";
+   document.querySelector("#subTaskForm").style.visibility = "visible";
     document.querySelector("#addTask").addEventListener("click",function eventHandler() {
-        ///this will execute only once
         addItemToCard(item);
         this.removeEventListener('click', eventHandler)}, {once : true});
    console.log(document.querySelector("#addTask"));
@@ -60,8 +57,7 @@ function createSubTask(item){
 function addItemToCard(item){
    
     console.log("Item Added");
-    //item.innerHTML="";
-  //  document.querySelector("#subTaskForm").style.visibility = "hidden";
+   document.querySelector("#subTaskForm").style.visibility = "hidden";
     let subTask=document.createElement("li");
     subTask.innerText=document.querySelector("#taskName").value;
     console.log(item);
