@@ -1,11 +1,11 @@
 document.querySelector("#createList").addEventListener("click",createList);
-//document.querySelector("#close").addEventListener("click",hideListForm);
+document.querySelector(".close").addEventListener("click",hideListForm);
 document.querySelector("#addList").addEventListener("click",createCard);
 
 let cards=[];
 function createList(){
-   
-  //  document.querySelector("#listForm").style.visibility = "visible";
+   e
+   document.querySelector("#listForm").style.visibility = "visible";
     console.log("List Created");
 }
 
