@@ -1,9 +1,9 @@
 
 function updateTime() {
     let dateTime = new Date();
-    let hours = dateTime.getHours();
-    let minutes = dateTime.getMinutes();
-    let seconds = dateTime.getSeconds();
+    let hours = dateTime.getHours().toString().padStart(2,"0");
+    let minutes = dateTime.getMinutes().toString().padStart(2,"0");
+    let seconds = dateTime.getSeconds().toString().padStart(2,"0");
     let am = document.getElementById("am");
 
     if (hours >= 12) {
